@@ -9,7 +9,7 @@ user_query = "Calculate hourly total revenue for March 5, 2016. After that, calc
 #user_query = "What was the count of payment types for Vendor ID 1 on 1 March 2016 between 1 am and 2 am?"
 
 # Create Spark Session
-spark = SparkSession.builder.appName('abc').getOrCreate()
+spark = SparkSession.builder.appName('nlp-query-engine').getOrCreate()
 
 # Load data
 df = spark.read.format("csv").option("header", "true").load("dbfs:/FileStore/yellow_tripdata_2016_03.csv")
